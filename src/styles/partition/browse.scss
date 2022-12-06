@@ -1,0 +1,366 @@
+.main-box{
+    .featured{
+        width: 1175px;
+        margin-top: 60px;
+        display: flex;
+        gap: 25px;
+        .games{
+            flex: 2;
+            background-color: var(--background-color-dark);
+            border-radius: 20px;
+            .title{
+                margin: 30px;
+                h1{
+                    font-size: 2.3em;
+                    color: var(--primary-color);
+                    span{
+                        color: var(--text-light);
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .games-list{
+                margin: 0 30px;
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+                .game-card{
+                    width: 220px;
+                    position: relative;
+                    .img{
+                        &:hover{
+                            button{
+                                display: initial;
+                            }
+                        }
+                        img{
+                            width: 220px;
+                            border-radius: 20px;
+                        }
+                        button{
+                            display: none;
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 130px;
+                            left: 50%;
+                            transform: translate(-50%);
+                            background-color: var(--background-color-dark);
+                            color: var(--primary-color);
+                            font-size: .9em;
+                            padding: 10px 0;
+                            width: 140px;
+                            border: none;
+                            border-radius: 30px;
+                        }
+                    }
+                    .title{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 20px 0;
+                        color: var(--text-light);
+                        .rating{
+                            display: flex;
+                            align-items: center;
+                            .icon{
+                                color: yellow;
+                            }
+                        }
+                    }
+                    .stats{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 20px 0;
+                        color: var(--text-light);
+                        p{
+                            color: var(--text-color);
+                        }
+                        .downloand{
+                            display: flex;
+                            align-items: center;
+                            .icon{
+                                color: var(--primary-color);
+                            }
+                            p{
+                                color: var(--text-light);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .downloanded{
+            flex: 1;
+            background-color: var(--background-color-dark);
+            border-radius: 20px;
+            h1{
+                margin: 30px 30px 0 30px;
+                color: var(--primary-color);
+                font-size: 2.1em;
+                span{
+                    color: var(--text-light);
+                    text-decoration: underline;
+                }
+            }
+            .games{
+                margin: 0 30px;
+                margin-bottom: 20px;
+                .game{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 30px 0;
+                    border-bottom: 1px solid var(--text-color);
+                    img{
+                        flex: 1;
+                        border-radius: 25px;
+                    }
+                    .date{
+                        flex: 3;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .title{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            margin: 0; 
+                            color: var(--text-light);                          
+                            p{
+                                color: var(--text-color);
+                                margin: 5px 0;
+                            }
+                            .numbers{
+                                display: flex;
+                                .rating{
+                                    display: flex;
+                                    p{
+                                        color: var(--text-light);
+                                        margin-right: 10px;
+                                    }
+                                    .icon{
+                                        color: yellow;
+                                    }
+                                }
+                                .downloand{
+                                    display: flex;
+                                    p{
+                                        color: var(--text-light);
+                                    }
+                                    .icon{
+                                        color: var(--primary-color);
+                                    }
+                                }
+                            }
+                        }
+                        button{
+                            background-color: var(--background-color);
+                            padding: 10px;
+                            border: none;
+                            border-radius: 30px;
+                            color: var(--primary-color);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .btn{
+            font-size: 1em;
+            font-weight: 600;
+            background-color: transparent;
+            border: none;
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-left: 230px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    .start-live{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        width: 1175px;
+        h1{
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin: 40px 0;
+            span{
+                color: var(--text-light);
+                text-decoration: underline;
+            }
+        }
+        .steps{
+            display: flex;
+            gap: 25px;
+            .step{
+                border: 1px solid var(--text-color);
+                width: 315px;
+                padding: 30px;
+                border-radius: 20px;
+                margin-bottom: 30px;
+                img{
+                    border-radius: 50%;
+                    margin-bottom: 15px;
+                }
+                h3{
+                    font-size: 1.3em;
+                    font-weight: 500;
+                    color: var(--text-light);
+                    margin-bottom: 15px;
+                }
+                p{
+                    color: var(--text-color);
+                    line-height: 2;
+                }
+            }
+        }
+        .step-btn{
+            background-color: var(--background-color-red);
+            color: var(--text-light);
+            padding: 15px 30px;
+            font-size: 1em;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+    }
+    .live{
+        background-color: var(--background-color-dark);
+        width: 1175px;
+        border-radius: 25px;
+        position: relative;
+        h1{
+            margin: 30px;
+            font-size: 2.2em;
+            color: var(--primary-color);
+            span{
+                color: var(--text-light);
+                text-decoration: underline;
+            }
+        }
+        .streams{
+            display: flex;
+            margin: 0 30px 60px 30px;
+            gap: 25px;
+            .stream{
+                display: flex;
+                flex-direction: column;
+                .img{
+                    margin-bottom: 20px;
+                    position: relative;
+                    display: flex;
+                    gap: 20px;
+                    &:hover{
+                        .p1{
+                            display: initial;
+                        }
+                        .p2{
+                            display: initial;
+                        }
+                        .p3{
+                            display: initial;
+                        }
+                    }
+                    img{
+                        width: 260px;
+                        border-radius: 20px
+                    }
+                    .p1{
+                        display: none;
+                        background-color: var(--background-color-red);
+                        color: var(--text-light);
+                        padding: 5px 10px;
+                        border-radius: 20px;
+                        position: absolute;
+                        font-size: .9em;
+                        top: 15px;
+                        right: 15px;
+                    }
+                    .p2{
+                        display: none;
+                        background-color: var(--background-color-red);
+                        color: var(--text-light);
+                        padding: 5px 10px;
+                        border-radius: 20px;
+                        position: absolute;
+                        font-size: .9em;
+                        bottom: 20px;
+                        left: 45px;
+                        p{
+                            display: flex;
+                            align-items: center;
+                            .icon{
+                                font-size: 1.4em;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                    .p3{
+                        display: none;
+                        background-color: var(--background-color-red);
+                        color: var(--text-light);
+                        padding: 5px 10px;
+                        border-radius: 20px;
+                        position: absolute;
+                        font-size: .9em;
+                        bottom: 20px;
+                        right: 45px;
+                        p{
+                            display: flex;
+                            align-items: center;
+                            .icon{
+                                font-size: 1.4em;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+                .profil{
+                    display: flex;
+                    gap: 10px;
+                    .avatar{
+                        img{
+                            border-radius: 50%;
+                        }
+                    }
+                    .date{
+                        .name{
+                            display: flex;
+                            align-items: center;
+                            .icon{
+                                color: var(--background-color-red);
+                                margin-right: 5px;
+                            }
+                            p{
+                                color: var(--primary-color);
+                            }
+                        }
+                        h2{
+                            color: var(--text-light);
+                            font-size: 1.4em;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        .streams-btn{
+            background-color: var(--background-color-red);
+            color: var(--text-light);
+            font-size: .9em;
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translate(-50%);
+            text-decoration: none;
+        }
+    }
+}

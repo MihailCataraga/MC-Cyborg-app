@@ -1,0 +1,152 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 20px;
+    background-color: var(--background-color-dark);
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .logo{
+            text-decoration: none;
+            h1{
+                font-size: 2.2em;
+                color: var(--primary-color);
+                display: flex;
+                align-items: center;
+                padding-right: 70px;
+                border-right: 1px solid var(--text-color);
+                margin: 0;
+                span{
+                    font-size: 1.5em;
+                    margin-right: 0.3em;
+                    position: relative;
+                    .bar1{
+                        width: 85px;
+                        height: 5px;
+                        background-color: var(--background-color-dark);
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transform: rotate(-25deg);
+                        margin-top: 25px;
+                    }
+                    .bar2{
+                        width: 35px;
+                        height: 5px;
+                        background-color: var(--background-color-dark);
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transform: rotate(225deg);
+                        margin: 35px 5px;
+                    }
+                }
+            }
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            background-color: var(--background-color);
+            border-radius: 30px;
+            margin-left: 70px;
+            .icon{
+                color: var(--text-color);
+                font-size: 1.6em;
+                
+            }
+            input{
+                background-color: transparent;
+                outline: none;
+                border: none;
+                font-size: 1.05em;
+                color: var(--text-color);
+                width: 220px;
+            }
+        }
+    }
+    
+    .right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .nav{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            .link{
+                color: var(--text-color);
+                text-decoration: none;
+                margin: 15px;
+                &:hover{
+                    color: var(--primary-color);
+                }
+                &:active{
+                    color: var(--primary-color);
+                }
+                
+            }
+        }
+        .profile{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin: 0 5px;
+            background-color: var(--background-color);
+            border-radius: 30px;
+            color: var(--text-color);
+            text-decoration: none;
+            p{
+                margin: 0 10px;
+            }
+            img{
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+            }
+            &:hover{
+                background-color: var(--background-color-red);
+                color: var(--text-light);
+                cursor: pointer;
+            }
+        }
+    }
+    .nav-btn{
+        display: none;
+    }
+    .nav-btn-close{
+        display: none;
+    }
+      
+}
+.min-navbar{
+    position: fixed;
+    margin-top: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid var(--text-color);
+    .navbar-link{
+        width: 100%;
+        color: var(--text-color);
+        background-color: var(--background-color-dark);
+        text-align: center;
+        padding: 15px 0;
+        border-top: 1px solid var(--text-color);
+        text-decoration: none;
+        &:hover{
+            color: var(--primary-color);
+        }
+        &:active{
+            color: var(--primary-color);
+        }
+    }
+} 

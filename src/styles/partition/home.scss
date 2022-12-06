@@ -1,0 +1,272 @@
+.main-box{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1300px;
+    margin: 30px 0 0 0;
+    border-radius: 25px;
+    padding-bottom: 60px;
+    .top{
+        background-image: url("../../../public/img/banner-bg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1180px;
+        height: 430px;
+        margin: 60px 0;
+        border-radius: 20px;
+        h3{
+            margin: 70px 0 0 60px;
+            font-size: 1.4em;
+            font-weight: 300;
+            color: var(--text-light);
+        }
+        p{
+            font-size: 3em;
+            font-weight: bold;
+            width: 70%;
+            margin: 20px 0 30px 60px;
+            color: var(--text-light);
+        }
+        span{
+            color: var(--primary-color);
+        }
+        .btn{
+            font-size: 1em;
+            background-color: var(--background-color-red);
+            border: none;
+            outline: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            margin: 20px 60px;
+            color: var(--text-light);
+            text-decoration: none;
+            &:hover{
+                background-color: var(--background-color-dark);
+                color: var(--primary-color);
+            }
+        }
+    }
+    .most-popular{
+        width: 1180px;
+        background-color: var(--background-color-dark);
+        margin-bottom: 60px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        h3{
+            font-size: 2.2em;
+            margin: 30px 0 10px 30px;
+            color: var(--primary-color);
+            span{
+                color: var(--text-light);
+                text-decoration: underline;
+            }
+        }
+        .game-list{
+            margin: 20px 30px 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            position: relative;
+            .card-game{
+                width: 260px;
+                background-color: var(--background-color);
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 30px;
+                img{
+                    width: 90%;
+                    height: 160px;
+                    border-radius: 20px;
+                    margin: 30px 15px 15px 15px;
+                }
+                .title{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 90%;
+                    color: var(--text-light);
+                    position: relative;
+                    margin-bottom: 10px;
+                    .icon{
+                        font-size: 1.3em;
+                        position: absolute;
+                        right: 0;
+                        margin-right: 25px;
+                        color: yellow;
+                    }
+                }
+                .brand{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 90%;
+                    color: var(--text-light);
+                    position: relative;
+                    margin-bottom: 30px;
+                    .icon{
+                        font-size: 1.3em;
+                        position: absolute;
+                        right: 0;
+                        margin-right: 35px;
+                        color: var(--primary-color);
+                    }
+                }
+            }
+            .popular-btn{
+                background-color: var(--background-color-red);
+                border: none;
+                outline: none;
+                font-size: 1em;
+                padding: 15px 25px;
+                border-radius: 30px;
+                color: var(--text-light);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: -50px;
+                text-decoration: none;
+                &:hover{
+                    background-color: #000;
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+    .library{
+        display: flex;
+        flex-direction: column;
+        width: 1180px;
+        background-color: var(--background-color-dark);
+        border-radius: 20px;
+        padding-bottom: 60px;
+        position: relative;
+        h3{
+            font-size: 2.2em;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin: 30px 0 10px 30px;
+            span{
+                color: var(--text-light);
+                text-decoration: underline;
+            }
+        }
+        .game{
+            display: flex;
+            align-items: center;
+            margin: 0 30px;
+            border-bottom: 1px solid var(--text-color);
+            padding-bottom: 15px;
+            .info{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 20px 0 0 0;
+                .img{
+                    flex: 1;
+                    img{
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 20px;
+                }
+                }
+                .title{
+                    flex: 1;
+                    margin-left: 30px;
+                    h4{
+                        color: var(--text-light);
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        color: var(--text-color);
+                    }
+                }
+            }
+            .mid{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 20px 0 0 0;
+                .date{
+                    flex: 1;
+                    margin-left: 130px;
+                    h4{
+                        color: var(--text-light);
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        color: var(--text-color);
+                    }
+                }
+                .played{
+                    flex: 2;
+                    margin-left: 100px;
+                    h4{
+                        color: var(--text-light);
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        color: var(--text-color);
+                    }
+                }
+            }
+            .bottom{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 20px 0 0 0;
+                .status{
+                    flex: 1;
+                    margin-left: 90px;
+                    h4{
+                        color: var(--text-light);
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        color: var(--text-color);
+                    }
+                }
+                .btn{
+                    flex: 1;
+                    margin-left: 120px;
+                    button{
+                        background-color: transparent;
+                        font-size: .9em;
+                        padding: 15px 30px;
+                        color: var(--primary-color);
+                        border: 1px solid var(--background-color-red);
+                        border-radius: 30px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .view-btn{
+            background-color: var(--background-color-red);
+            font-size: 1em;
+            color: var(--text-light);
+            padding: 15px 20px;
+            width: 130px;
+            border-radius: 30px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: -20px;
+            border: none;
+            text-decoration: none;
+            &:hover{
+                background-color: #000;
+                color: var(--primary-color);
+            }
+            
+        }
+    }
+}

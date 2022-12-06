@@ -1,0 +1,1553 @@
+:root{
+    --background-color-dark: #181b1c;
+    --background-color: #1e2122;
+    --background-color-red: #8d153e;
+    --primary-color: rgb(236, 98, 145);
+    --text-color: rgb(168, 160, 149);
+    --text-light: #fff;
+    --animation-spped: 1;
+}
+
+// @function getAnimationDuration($duration: number) {
+//     @return calc($duration * var(--animation-speed));
+// }
+
+* {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    background-color: var(--background-color-dark);
+}
+
+@import "./partition/navbar.scss";
+@import "./partition/home.scss";
+@import "./partition/browse.scss";
+@import "./partition/details.scss";
+@import "./partition/streams.scss";
+@import "./partition/profile.scss";
+
+
+@import "./partition/footer.scss";
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .container{
+        .main-box{
+            width: 1125px;
+            // Home
+            .top{
+                width: 1000px;
+            }
+            .most-popular{
+                width: 1000px;
+                .game-list{
+                    .card-game{
+                        width: 220px;
+                    }
+                }
+            }
+            .library{
+                width: 1000px;
+                .game{
+                    .date{
+                        margin-left: 100px;
+                    }
+                    .played{
+                        margin-left: 60px;
+                        width: 110px;
+                    }
+                    .status{
+                        margin-left: 50px;
+                    }
+                    .btn{
+                        margin-left: 60px;
+                    }
+                }
+            }
+            // Browse
+            .featured{
+                width: 1000px;
+                .games{
+                    .games-list{
+                        .game-card{
+                            width: 180px;
+                            .img{
+                                img{
+                                    width: 180px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .downloanded{
+                    padding-bottom: 20px;
+                }
+            }
+            .start-live{
+                width: 1000px;
+                .steps{
+                    .step{
+                        width: 250px;
+                    }
+                }
+            }
+            .live{
+                width: 1000px;
+                .streams{
+                    .stream{
+                        width: 215px;
+                        .img{
+                            img{
+                                width: 215px;
+                            }
+                            .p2{
+                                left: 20px;
+                            }
+                            .p3{
+                                right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            // Details
+            .pre{
+                width: 1000px;
+                .img-left{
+                    width: 240px;
+                }
+            }
+            .details{
+                width: 1000px;
+                .imgs{
+                    img{
+                        width: 300px;
+                    }
+                }
+            }
+            .other-games{
+                width: 1000px;
+                .games{
+                    .game{
+                        width: 460px;
+                    }
+                }
+            }
+            //Streams
+            .streams-box{
+                width: 1000px;
+                .streams-top{
+                    margin: 30px 0;
+                    .left{
+                        .streams{
+                            .stream{
+                                width: 180px;
+                            }
+                        }
+                    }
+                }
+            }
+            .live-stream{
+                width: 1000px;
+                margin: 0;
+                .streams{
+                    .stream{
+                        width: 215px;
+                        img{
+                            width: 100%;
+                        }
+                        .profile{
+                            img{
+                                width: 50px;
+                            }
+                            .date{
+                                h3{
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // Profile
+            .main-case{
+                width: 1125px;
+                .profile{
+                    width: 950px;
+                }
+                .clips{
+                    .clips-list{
+                        .clip{
+                            width: 217px;
+                            .img{
+                                img{
+                                    width: 180px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .library{
+                    width: 950px;
+                    .games{
+                        .game{
+                            .name{
+                                margin-right: 110px;
+                            }
+                            .date-add{
+                                margin-right: 10px;
+                            }
+                            .played{
+                                margin-right: 60px;
+                            }
+                            .currently{
+                                margin-right: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar{
+        .left{
+            .logo{
+                h1{
+                    padding-right: 0;
+                    border-right: none;
+                }
+            }
+            .search{
+                margin-left: 30px;
+                input{
+                    width: 150px;
+                }
+            }
+        }
+    }
+    .container{
+        .main-box{
+            margin-top: 30px;
+            width: 950px;
+            // Home
+            .top{
+                width: 825px;
+                p{
+                    width: 50%;
+                }
+            }
+            .most-popular{
+                width: 825px;
+                h3{
+                    font-size: 1.4em;
+                }
+                .game-list{
+                    .card-game{
+                        width: 170px;
+                        img{
+                            width: 140px;
+                            height: 110px;
+                        }
+                    }
+                }
+            }
+            .library{
+                width: 825px;
+                .game{
+                    .mid{
+                        .date{
+                            margin-left: 60px;
+                        }
+                        .played{
+                            margin-left: 30px;
+                        }
+                    }
+                    .bottom{
+                        .status{
+                            margin-left: 20px;
+                        }
+                        .btn{
+                            margin-left: 30px;
+                        }
+                    }
+                }
+            }
+            // Browse
+            .featured{
+                width: 825px;
+                .games{
+                    .games-list{
+                        .game-card{
+                            width: 120px;
+                            .img{
+                                img{
+                                    width: 120px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .downloanded{
+                    padding-bottom: 20px;
+                }
+            }
+            .start-live{
+                width: 825px;
+                .steps{
+                    .step{
+                        width: 190px;
+                    }
+                }
+            }
+            .live{
+                width: 825px;
+                .streams{
+                    .stream{
+                        width: 170px;
+                        .img{
+                            img{
+                                width: 170px;
+                            }
+                            .p2{
+                                bottom: 45px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            // Details
+            .pre{
+                width: 825px;
+            }
+            .details{
+                width: 825px;
+                .imgs{
+                    img{
+                        width: 240px;
+                    }
+                }
+            }
+            .other-games{
+                width: 825px;
+                .games{
+                    .game{
+                        width: 370px;
+                    }
+                }
+            }
+            //Streams
+            .streams-box{
+                width: 825px;
+                .streams-top{
+                    margin: 30px 0;
+                    .left{
+                        .streams{
+                            .stream{
+                                width: 110px;
+                            }
+                        }
+                    }
+                }
+            }
+            .live-stream{
+                width: 825px;
+                margin: 0;
+                .streams{
+                    .stream{
+                        width: 170px;
+                        img{
+                            width: 100%;
+                        }
+                        .profile{
+                            img{
+                                width: 50px;
+                            }
+                            .date{
+                                h3{
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // Profile
+            .main-case{
+                width: 825px;
+                margin-top: 0;
+                .profile{
+                    width: 765px;
+                    margin: 50px 0;
+                    .left{
+                        img{
+                            width: 250px;
+                        }
+                    }
+                }
+                .clips{
+                    width: 765px;
+                    margin: 50px 0;
+                    .clips-list{
+                        .clip{
+                            width: 173px;
+                            .img{
+                                img{
+                                    width: 143px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .library{
+                    width: 765px;
+                    margin: 50px 0;
+                    margin-bottom: 0;
+                    .games{
+                        .game{
+                            .name{
+                                margin-right: 70px;
+                            }
+                            .date-add{
+                                margin-right: -30px;
+                            }
+                            .played{
+                                margin-right: 70px;
+                            }
+                            .currently{
+                                margin-right: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+
+    .navbar{
+        position: fixed;
+        z-index: 2;
+        justify-content: space-between;
+        background-color: var(--background-color);
+        top: 0;
+        padding: 10px 0;
+        .left{
+            padding-left: 20px;
+            justify-content: start;
+            .search{
+                display: none;
+            }
+
+        }
+        .right{
+            .nav{
+                display: none;
+            }
+            .profile{
+                display: none;
+            }
+        }
+        .nav-btn{
+            display: initial;
+            cursor: pointer;
+            padding-right: 20px;
+            .line1{
+                width: 25px;
+                height: 2px;
+                background-color: var(--background-color-red);
+
+            }
+            .line2{
+                width: 35px;
+                height: 2px;
+                margin: 8px 0;
+                background-color: var(--background-color-red);
+            }
+        }
+        .nav-btn-close{
+            display: initial;
+            cursor: pointer;
+            position: relative;
+            width: 35px;
+            height: 35px;
+            margin-right: 20px;
+            .line1{
+                width: 35px;
+                height: 2px;
+                background-color: var(--background-color-red);
+                position: absolute;
+                transform: rotate(45deg);
+                right: 5px;
+                top: 15px;
+                
+
+            }
+            .line2{
+                width: 35px;
+                height: 2px;
+                margin: 8px 0;
+                background-color: var(--background-color-red);
+                position: absolute;
+                transform: rotate(-45deg);
+                right: 5px;
+                top: 7.5px;
+            }
+        }
+    }
+    .min-navbar{
+        margin-top: 82px;
+        z-index: 2;
+    }
+    .container{
+        padding-inline: 5vw;
+        .main-box{
+            margin-top: 110px;
+            width: 700px;
+            // Home
+            .top{
+                width: 575px;
+                p{
+                    width: 70%;
+                }
+            }
+            .most-popular{
+                width: 575px;
+                h3{
+                    font-size: 1.3em;
+                }
+                .game-list{
+                    .card-game{
+                        width: 260px;
+                        img{
+                            width: 85%;
+                            height: 160px;
+                        }
+                    }
+                }
+            }
+            .library{
+                width: 575px;
+                h3{
+                    font-size: 1.3em;
+                }
+                .game{
+                    display: flex;
+                    flex-direction: column;
+                    .info{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        .img{
+                            flex: 1;
+                        }
+                        .title{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                    }
+                    .mid{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        .date{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                        .played{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                    }
+                    .bottom{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        .status{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                        .btn{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            // Browse
+            .featured{
+                width: 575px;
+                flex-direction: column;
+                .games{
+                    .title{
+                        h1{
+                            font-size: 1.3em;
+                        }
+                    }
+                    .games-list{
+                        .game-card{
+                            width: 150px;
+                            .img{
+                                img{
+                                    width: 150px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .downloanded{
+                    padding-bottom: 20px;
+                    h1{
+                        font-size: 1.3em;
+                    }
+                    .games{
+                        .game{
+                            .date{
+                                flex: 5;
+                            }
+                        }
+                    }
+                }
+            }
+            .start-live{
+                width: 575px;
+                h1{
+                    font-size: 1.3em;
+                }
+                .steps{
+                    flex-direction: column;
+                    .step{
+                        width: 520px;
+                    }
+                }
+            }
+            .live{
+                width: 575px;
+                h1{
+                    font-size: 1.3em;
+                }
+                .streams{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .stream{
+                        width: 240px;
+                        .img{
+                            img{
+                                width: 240px;
+                            }
+                            .p2{
+                                bottom: 45px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            // Details
+            .pre{
+                width: 575px;
+                flex-direction: column;
+                .img-left{
+                    width: 100%;
+                }
+                .img-right{
+                    width: 100%;
+                    .play{
+                        margin-top: 120px;
+                    }
+                }
+            }
+            .details{
+                width: 575px;
+                .name{
+                    flex-direction: column;
+                    gap: 0;
+                    .left{
+                        margin: 25px 25px 0 25px;
+                    }
+                    .right{
+                        margin: 25px 25px 0 25px;
+                    }
+                }
+                .imgs{
+                    flex-direction: column;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .other-games{
+                width: 575px;
+                .games{
+                    .game{
+                        width: 520px;
+                    }
+                }
+            }
+            //Streams
+            .streams-box{
+                width: 575px;
+                .streams-top{
+                    margin: 30px 0;
+                    flex-direction: column;
+                    .left{
+                        h1{
+                            font-size: 1.4em;
+                        }
+                        .streams{
+                            .stream{
+                                width: 150px;
+                            }
+                        }
+                    }
+                    .right{
+                        h1{
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+            }
+            .live-stream{
+                width: 575px;
+                margin: 0;
+                h1{
+                    font-size: 1.4em;
+                }
+                .streams{
+                    .stream{
+                        width: 245px;
+                        img{
+                            width: 100%;
+                        }
+                        .profile{
+                            img{
+                                width: 50px;
+                            }
+                            .date{
+                                h3{
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // Profile
+            .main-case{
+                width: 575px;
+                margin-top: 0;
+                .profile{
+                    width: 515px;
+                    margin: 50px 0;
+                    flex-direction: column;
+                    .left{
+                        img{
+                            width: 510px;
+                        }
+                    }
+                    .right{
+                        width: 510px;
+                    }
+                }
+                .clips{
+                    width: 515px;
+                    margin: 50px 0;
+                    h1{
+                        font-size: 1.4em;
+                    }
+                    .clips-list{
+                        flex-wrap: wrap;
+                        .clip{
+                            width: 245px;
+                            .img{
+                                img{
+                                    width: 215px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .library{
+                    width: 515px;
+                    margin: 50px 0;
+                    margin-bottom: 0;
+                    .games{
+                        .game{
+                            flex-wrap: wrap;
+                            align-items: start;
+                            flex-direction: row;
+                            img{
+                                margin-right: 180px;
+                                padding-bottom: 20px;
+                            }
+                            .name{
+                                margin-right: 150px;
+                                
+                            }
+                            .date-add{
+                                margin-right: 105px;
+                                padding-bottom: 20px;
+                            }
+                            .played{
+                                margin-right: 70px;
+                                padding-bottom: 20px;
+                            }
+                            .currently{
+                                margin-right: 165px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        padding-inline: 5vw;
+        .main-box{
+            margin-top: 110px;
+            width: 525px;
+            // Home
+            .top{
+                margin-top: 30px;
+                width: 460px;
+                height: 380px;
+                h3{
+                    text-align: center;
+                    margin-left: 50%;
+                    transform: translate(-50%);
+                }
+                p{
+                    width: 70%;
+                    text-align: center;
+                    margin-left: 50%;
+                    transform: translate(-50%);
+                    font-size: 2.1em;
+                }
+                button{
+                    margin-left: 50%;
+                    transform: translate(-50%);
+
+                }
+            }
+            .most-popular{
+                width: 460px;
+                h3{
+                    font-size: 1.3em;
+                }
+                .game-list{
+                    .card-game{
+                        width: 200px;
+                        img{
+                            width: 85%;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+            .library{
+                width: 460px;
+                h3{
+                    font-size: 1.3em;
+                }
+                .game{
+                    display: flex;
+                    flex-direction: column;
+                    .info{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        .img{
+                            flex: 1;
+                        }
+                        .title{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                    }
+                    .mid{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        .date{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                        .played{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                    }
+                    .bottom{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        .status{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                        .btn{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            // Browse
+            .featured{
+                width: 460px;
+                flex-direction: column;
+                margin-top: 30px;
+                .games{
+                    .title{
+                        h1{
+                            font-size: 1.3em;
+                        }
+                    }
+                    .games-list{
+                        gap: 10px;
+                        .game-card{
+                            width: 120px;
+                            .img{
+                                img{
+                                    width: 120px;
+                                }
+                            }
+                            .title{
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            .stats{
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                        }
+                    }
+                }
+            }
+            .start-live{
+                width: 460px;
+                h1{
+                    font-size: 1.3em;
+                }
+                .steps{
+                    flex-direction: column;
+                    .step{
+                        width: 400px;
+                    }
+                }
+            }
+            .live{
+                width: 460px;
+                h1{
+                    font-size: 1.3em;
+                }
+                .streams{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .stream{
+                        width: 185px;
+                        .img{
+                            img{
+                                width: 185px;
+                            }
+                            .p2{
+                                bottom: 45px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            // Details
+            .pre{
+                width: 575px;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+                .img-left{
+                    width: 470px;
+                }
+                .img-right{
+                    width: 470px;
+                    .play{
+                        margin-top: 90px;
+                    }
+                }
+            }
+            .details{
+                width: 465px;
+                .name{
+                    flex-direction: column;
+                    gap: 0;
+                    .left{
+                        margin: 25px 25px 0 25px;
+                    }
+                    .right{
+                        margin: 25px 25px 0 25px;
+                    }
+                }
+                .imgs{
+                    flex-direction: column;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .other-games{
+                width: 465px;
+                h1{
+                    font-size: 1.4em;
+                }
+                .games{
+                    .game{
+                        width: 520px;
+                    }
+                }
+            }
+            //Streams
+            .streams-box{
+                width: 465px;
+                .streams-top{
+                    margin: 30px 0;
+                    flex-direction: column;
+                    .left{
+                        h1{
+                            font-size: 1.4em;
+                        }
+                        .streams{
+                            padding-bottom: 20px;
+                            .stream{
+                                width: 150px;
+                            }
+                        }
+                    }
+                    .right{
+                        h1{
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+            }
+            .live-stream{
+                width: 465px;
+                margin: 0;
+                h1{
+                    font-size: 1.4em;
+                }
+                .streams{
+                    .stream{
+                        width: 190px;
+                        img{
+                            width: 100%;
+                        }
+                        .profile{
+                            img{
+                                width: 50px;
+                            }
+                            .date{
+                                h3{
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // Profile
+            .main-case{
+                width: 440px;
+                margin-top: 0;
+                padding-top: 0;
+                .profile{
+                    width: 380px;
+                    margin: 50px 0;
+                    flex-direction: column;
+                    .left{
+                        img{
+                            width: 380px;
+                        }
+                    }
+                    .right{
+                        width: 380px;
+                    }
+                }
+                .clips{
+                    width: 380px;
+                    margin: 50px 0;
+                    h1{
+                        font-size: 1.2em;
+                    }
+                    .clips-list{
+                        flex-wrap: wrap;
+                        .clip{
+                            width: 177px;
+                            .img{
+                                img{
+                                    width: 145px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .library{
+                    width: 380px;
+                    margin: 50px 0;
+                    margin-bottom: 0;
+                    .games{
+                        .game{
+                            flex-wrap: wrap;
+                            align-items: start;
+                            flex-direction: row;
+                            img{
+                                margin-left: 50%;
+                                transform: translate(-50%);
+                                padding-bottom: 20px;
+                            }
+                            .name{
+                                margin-right: 20px;
+                                margin-left: 25%;
+                                transform: translate(-25%);
+                                
+                            }
+                            .date-add{
+                                
+                                padding-bottom: 20px;
+                            }
+                            .played{
+                                margin-right: 0px;
+                                padding-bottom: 20px;
+                                margin-left: 25%;
+                                transform: translate(-25%);
+                            }
+                            .currently{
+                                margin-right: 0px;
+                            }
+                            button{
+                                margin-left: 50%;
+                                transform: translate(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .container{
+        padding-inline: 5vw;
+        .main-box{
+            margin-top: 110px;
+            width: 325px;
+            // Home
+            .top{
+                margin-top: 30px;
+                width: 260px;
+                height: 450px;
+                h3{
+                    text-align: center;
+                    margin-left: 50%;
+                    transform: translate(-50%);
+                }
+                p{
+                    width: 70%;
+                    text-align: center;
+                    font-size: 2.1em;
+                }
+                button{
+                    margin-left: 50%;
+                    transform: translate(-50%);
+
+                }
+            }
+            .most-popular{
+                width: 260px;
+                h3{
+                    font-size: .9em;
+                }
+                .game-list{
+                    .card-game{
+                        width: 200px;
+                        img{
+                            width: 85%;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+            .library{
+                width: 260px;
+                h3{
+                    font-size: .9em;
+                }
+                .game{
+                    display: flex;
+                    flex-direction: column;
+                    .info{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 100%;
+                        .img{
+                            flex: 1;
+                        }
+                        .title{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                    }
+                    .mid{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 100%;
+                        .date{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                        .played{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                    }
+                    .bottom{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 100%;
+                        .status{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                        .btn{
+                            flex: 1;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            // Browse
+            .featured{
+                width: 280px;
+                flex-direction: column;
+                margin-top: 30px;
+                text-align: center;
+                .games{
+                    .games-list{
+                        gap: 10px;
+                        flex-direction: column;
+                        .game-card{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            width: 220px;
+                            .img{
+                                img{
+                                    width: 140px;
+                                    height: 140px;
+                                    object-fit: cover;
+                                }
+                            }
+                            .title{
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 5px 0;
+                            }
+                            .stats{
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 5px 0;
+                            }
+                        }
+                    }
+                }
+                .downloanded{
+                    .games{
+                        .game{
+                            img{
+                                width: 60px;
+                            }
+                            .date{
+                                .title{
+                                    .numbers{
+                                        .rating{
+                                            p{
+                                                margin-right: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .start-live{
+                width: 280px;
+                text-align: center;
+                h1{
+                    font-size: 1.3em;
+                }
+                .steps{
+                    flex-direction: column;
+                    .step{
+                        width: 220px;
+                    }
+                }
+            }
+            .live{
+                width: 280px;
+                text-align: center;
+                h1{
+                    font-size: 1.3em;
+                }
+                .streams{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .stream{
+                        width: 220px;
+                        .img{
+                            img{
+                                width: 220px;
+                            }
+                            .p2{
+                                bottom: 45px;
+                            }
+                            
+                        }
+                        .profil{
+                            text-align: start;
+                        }
+                    }
+                }
+            }
+            // Details
+            .pre{
+                width: 280px;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+                .img-left{
+                    width: 270px;
+                }
+                .img-right{
+                    width: 270px;
+                    .play{
+                        margin-top: 40px;
+                    }
+                }
+            }
+            h1{
+                font-size: 1.4em;
+            }
+            .details{
+                width: 280px;
+                .name{
+                    flex-direction: column;
+                    gap: 0;
+                    .left{
+                        margin: 25px 25px 0 25px;
+                    }
+                    .right{
+                        margin: 25px 25px 0 25px;
+                    }
+                }
+                .imgs{
+                    flex-direction: column;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .other-games{
+                width: 280px;
+                h1{
+                    font-size: 1.4em;
+                }
+                .games{
+                    .game{
+                        width: 280px;
+                    }
+                }
+            }
+            //Streams
+            .streams-box{
+                width: 280px;
+                .streams-top{
+                    margin: 30px 0;
+                    flex-direction: column;
+                    .left{
+                        h1{
+                            font-size: 1.4em;
+                        }
+                        .streams{
+                            padding-bottom: 20px;
+                            flex-direction: column;
+                            .stream{
+                                display: flex;
+                                width: 80px;
+                                .title{
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-left: 10px;
+                                }
+                                .number{
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-top: 20px;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .right{
+                        h1{
+                            font-size: 1.4em;
+                        }
+                        .streamers{
+                            .streamer{
+                                .date{
+                                    flex-direction: column;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .live-stream{
+                width: 280px;
+                margin: 0;
+                h1{
+                    font-size: 1.4em;
+                }
+                .streams{
+                    .stream{
+                        width: 220px;
+                        img{
+                            width: 100%;
+                        }
+                        .profile{
+                            img{
+                                width: 50px;
+                            }
+                            .date{
+                                h3{
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // Profile
+            .main-case{
+                width: 280px;
+                margin-top: 0;
+                padding-top: 0;
+                .profile{
+                    width: 220px;
+                    margin: 50px 0;
+                    flex-direction: column;
+                    .left{
+                        img{
+                            width: 220px;
+                        }
+                    }
+                    .right{
+                        width: 220px;
+                    }
+                }
+                .clips{
+                    width: 220px;
+                    margin: 50px 0;
+                    h1{
+                        font-size: 1em;
+                    }
+                    .clips-list{
+                        flex-wrap: wrap;
+                        .clip{
+                            width: 220px;
+                            .img{
+                                img{
+                                    width: 190px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .library{
+                    width: 220px;
+                    margin: 50px 0;
+                    margin-bottom: 0;
+                    h1{
+                        font-size: 1em;
+                    }
+                    .games{
+                        .game{
+                            align-items: flex-start;
+                            justify-content: center;
+                            flex-direction: column;
+                            img{
+                                margin-left: 0;
+                                transform: translate(0);
+                                padding-bottom: 20px;
+                            }
+                            .name{
+                                margin-right: 0;
+                                margin-left: 0;
+                                transform: translate(0);
+                                padding-bottom: 20px;
+                            }
+                            .date-add{
+                                
+                                padding-bottom: 20px;
+                            }
+                            .played{
+                                margin-right: 0px;
+                                padding-bottom: 20px;
+                                margin-left: 0;
+                                transform: translate(0);
+                            }
+                            .currently{
+                                margin-right: 0px;
+                                padding-bottom: 20px;
+                            }
+                            button{
+                                margin-left: 0;
+                                transform: translate(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        p{
+            text-align: center;
+        }
+    }
+}

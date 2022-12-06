@@ -1,0 +1,212 @@
+.streams-box{
+    background-color: var(--background-color);
+    width: 1300px;
+    border-radius: 25px;
+    padding-bottom: 60px;
+    margin-top: 30px;
+    .streams-top{
+        display: flex;
+        gap: 25px;
+        margin: 60px;
+        .left{
+            flex: 2;
+            background-color: var(--background-color-dark);
+            border-radius: 20px;
+            h1{
+                color: var(--primary-color);
+                font-size: 2.2em;
+                margin: 30px;
+                span{
+                    color: var(--text-light);
+                    text-decoration: underline;
+                }
+            }
+            .streams{
+                display: flex;
+                margin: 0 30px;
+                gap: 30px;
+                .stream{
+                    width: 220px;
+                    img{
+                        width: 100%;
+                        border-radius: 20px;
+                    }
+                    .title{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 20px;
+                        h4{
+                            color: var(--text-light);
+                        }
+                        .scor{
+                            display: flex;
+                            align-items: center;
+                            .icon{
+                                color: yellow;
+                            }
+                            p{
+                                color: var(--text-color);
+                            }
+                        }
+                    }
+                    .number{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        p{
+                            color: var(--text-color);
+                        }
+                        .down{
+                            display: flex;
+                            align-items: center;
+                            .icon{
+                                color: var(--primary-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+            flex: 1;
+            background-color: var(--background-color-dark);
+            border-radius: 20px;
+            h1{
+                margin: 30px;
+                color: var(--primary-color);
+                font-size: 2.2em;
+                span{
+                    color: var(--text-light);
+                    text-decoration: underline;
+                }
+            }
+            .streamers{
+                margin: 0 30px;
+                .streamer{
+                    display: flex;
+                    align-items: center;
+                    padding: 25px 0;
+                    border-bottom: 1px solid var(--text-color);
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    h3{
+                        color: var(--text-light);
+                        margin-right: 5px;
+                    }
+                    img{
+                        border-radius: 50%;
+                        margin-right: 15px;
+                    }
+                    .date{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        .name{
+                            display: flex;
+                            align-items: center;
+                            .icon{
+                                color: var(--background-color-red);
+                                margin-right: 5px;
+                            }
+                            p{
+                                color: var(--primary-color);
+                            }
+                        }
+                        button{
+                            background-color: var(--background-color-red);
+                            color: var(--text-light);
+                            font-size: .9em;
+                            padding: 10px 20px;
+                            border-radius: 30px;
+                            border: none;
+                            &:hover{
+                                background-color: var(--background-color-dark);
+                                color: var(--primary-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .live-stream{
+        background-color: var(--background-color-dark);
+        margin: 0 60px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        h1{
+            margin: 30px;
+            font-size: 2.2em;
+            color: var(--primary-color);
+            span{
+                color: var(--text-light);
+                text-decoration: underline;
+            }
+        }
+        .streams{
+            margin: 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding-bottom: 50px;
+            .stream{
+                width: 260px;
+                img{
+                    width: 260px;
+                    border-radius: 20px
+                }
+                .profile{
+                    display: flex;
+                    gap: 15px;
+                    margin-top: 15px;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                    .date{
+                        display: flex;
+                        flex-direction: column;
+                        .name{
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 5px;
+                            .icon{
+                                color: var(--background-color-red);
+                                margin-right: 5px;
+                            }
+                            p{
+                                color: var(--primary-color);
+                            }
+                        }
+                        h3{
+                            color: var(--text-light);
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: var(--background-color-red);
+            color: var(--text-light);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: .9em;
+            &:hover{
+                background-color: var(--background-color-dark);
+                color: var(--primary-color);
+            }
+        }
+    }
+}

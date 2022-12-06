@@ -1,0 +1,290 @@
+.main-case{
+    background-color: var(--background-color);
+    width: 1300px;
+    margin-top: 30px;
+    border-radius: 25px;
+    padding-top: 10px;
+    .profile{
+        display: flex;
+        align-items: center;
+        margin: 60px;
+        margin-top: 20px;
+        background-color: var(--background-color-dark);
+        border-radius: 20px;
+        gap: 20px;
+        padding: 30px;
+        .left{
+            flex: 1;
+            img{
+                width: 350px;
+                border-radius: 20px;
+            }
+        }
+        .mid{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .status{
+                font-size: 1em;
+                color: var(--text-light);
+                background-color: var(--background-color-red);
+                padding: 5px 20px;
+                width: 50px;
+                border-radius: 30px;
+                margin-bottom: 15px;
+            }
+            h2{
+                color: var(--text-light);
+                margin-bottom: 25px;
+            }
+            p{
+                color: var(--text-color);
+                line-height: 2;
+                margin-bottom: 25px;
+            }
+            button{
+                width: 180px;
+                font-size: .9em;
+                padding: 15px 25px;
+                border: 1px solid var(--background-color-red);
+                border-radius: 30px;
+                background-color: var(--background-color-dark);
+                color: var(--primary-color);
+                &:hover{
+                    border: 1px solid var(--text-color);
+                }
+            }
+        }
+        .right{
+            flex: 1;
+            background-color: var(--background-color);
+            border-radius: 20px;
+            .games{
+                padding: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h6{
+                    font-size: 1em;
+                    color: var(--text-color);
+                    font-weight: 400;
+                }
+                p{
+                    color: var(--primary-color);
+                }
+            }
+            .friends{
+                padding: 0 25px 25px 25px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h6{
+                    font-size: 1em;
+                    color: var(--text-color);
+                    font-weight: 400;
+                }
+                p{
+                    color: var(--primary-color);
+                }
+            }
+            .lives{
+                padding: 0 25px 25px 25px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h6{
+                    font-size: 1em;
+                    color: var(--text-color);
+                    font-weight: 400;
+                }
+                p{
+                    color: var(--primary-color);
+                }
+            }
+            .clip{
+                padding: 0 25px 25px 25px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h6{
+                    font-size: 1em;
+                    color: var(--text-color);
+                    font-weight: 400;
+                }
+                p{
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+    .clips{
+        background-color: var(--background-color-dark);
+        margin: 0 60px;
+        border-radius: 20px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        h1{
+            color: var(--primary-color);
+            font-size: 2.2em;
+            span{
+                color: var(--text-light);
+                text-decoration: underline;
+            }
+        }   
+        .clips-list{
+            display: flex;
+            gap: 25px;
+            .clip{
+                width: 260px;
+                background-color: var(--background-color);
+                border-radius: 20px;
+                
+                .img{
+                    position: relative;
+
+                    img{
+                        width: 230px;
+                        margin: 30px 15px 15px 15px;
+                        border-radius: 20px;
+                    }
+                    .btn-play{
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        background-color: var(--background-color-dark);
+                        border-radius: 50%;
+                        top: 100px;
+                        left: 50%;
+                        transform: translate(-50%);
+                        .icon{
+                            color: var(--primary-color);
+                            font-size: 1.5em;
+                            margin-top: 8px;
+                            margin-left: 8px;
+                        }
+                    }
+                }
+                .date{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 15px;
+                    padding-bottom: 20px;
+                    h4{
+                        color: var(--text-light)
+                    }
+                    .views{
+                        display: flex;
+                        align-items: center;
+                        .icon{
+                            color: var(--primary-color);
+                        }
+                        p{
+                            color: var(--text-light)
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            margin-left: 50%;
+            transform: translate(-50%);
+            margin-top: 50px;
+            width: 160px;
+            font-size: .9em;
+            background-color: var(--background-color-red);
+            color: var(--text-light);
+            border: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            &:hover{
+                background-color: var(--background-color-dark);
+                color: var(--primary-color);
+                border: 1px solid var(--text-color);
+            }
+        }
+    }
+    .library{
+        margin: 60px;
+        width: 1120px;
+        background-color: var(--background-color-dark);
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 0;
+        h1{
+            font-size: 2.2em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            span{
+                color: var(--text-light);
+                text-decoration: underline;
+            }
+        }
+        .games{
+            .game{
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid var(--text-color);
+                padding: 20px 0;
+                margin: 0;
+                &:last-child{
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+                img{
+                    border-radius: 25px;
+                    margin-right: 30px;
+                }
+                .name{
+                    margin-right: 130px;
+                    h4{
+                        color: var(--text-light);
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        color: var(--text-color);
+                    }
+                }
+                .date-add{
+                    margin-right: 100px;
+                    h4{
+                        color: var(--text-light);
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        color: var(--text-color);
+                    }
+                }
+                .played{
+                    margin-right: 90px;
+                    h4{
+                        color: var(--text-light);
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        color: var(--text-color);
+                    }
+                }
+                .currently{
+                    margin-right: 120px;
+                    h4{
+                        color: var(--text-light);
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        color: var(--text-color);
+                    }
+                }
+                button{
+                    font-size: .9em;
+                    background-color: transparent;
+                    border: 1px solid var(--text-color);
+                    color: var(--text-color);
+                    padding: 15px 30px;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+}

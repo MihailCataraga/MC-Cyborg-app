@@ -1,0 +1,17 @@
+.footer{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        color: var(--text-light);
+        .link{
+            color: var(--text-light);
+            text-decoration: none;
+            &:hover{
+                color: var(--primary-color);
+                cursor: pointer;
+            }
+        }
+    }
+}

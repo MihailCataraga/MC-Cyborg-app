@@ -1,0 +1,239 @@
+.pre{
+    margin: 60px 0;
+    display: flex;
+    gap: 25px;
+    .img-left{
+        flex: 1;
+        width: 800px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+    .img-right{
+        flex: 2;
+        width: 350px;
+        border-radius: 20px;
+        position: relative;
+        z-index: 1;
+        img{
+            width: 100%;
+            border-radius: 20px;
+        }
+        .play{
+            width: 50px;
+            height: 50px;
+            background-color: var(--background-color-dark);
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-left: 50%;
+            margin-top: 150px;
+            transform: translate(-50%);
+            z-index: 2;
+            .icon{
+                font-size: 1.8em;
+                margin-left: 50%;
+                margin-top: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                color: var(--primary-color);
+            }
+        }
+    }
+}
+h1{
+    font-size: 2.6em;
+    color: var(--text-light);
+    margin-bottom: 60px;
+}
+.details{
+    margin: 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background-color-dark);
+    border-radius: 20px;
+    .name{
+        display: flex;
+        gap: 25px;
+        .left{
+            flex: 1;
+            margin: 25px 0 0 25px;
+            padding: 25px;
+            background-color: var(--background-color);
+            border-radius: 20px;
+            .title{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                h4{
+                    color: var(--text-light);
+                }
+                .scor{
+                    display: flex;
+                    align-items: center;
+                    .icon{
+                        color: yellow;
+                        font-size: 1.2em;
+                    }
+                    p{
+                        color: var(--text-color);
+                        margin: 0;
+                    }
+                }
+            }
+            .type{
+                display: flex;
+                justify-content: space-between;
+                h4{
+                    color: var(--text-color);
+                }
+                .down{
+                    display: flex;
+                    align-items: center;
+                    .icon{
+                        color: var(--primary-color);
+                        font-size: 1.4em;
+                    }
+                    p{
+                        color: var(--text-color);
+                        margin: 0;
+                    }
+                }
+            }
+
+        }
+        .right{
+            flex: 1;
+            margin: 25px 25px 0 0;
+            padding: 25px;
+            background-color: var(--background-color);
+            border-radius: 20px;
+            .stats{
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+                .stat{
+                    .star{
+                        color: yellow;
+                        font-size: 1.2em;
+                        margin-bottom: 10px;
+                    }
+                    .icon{
+                        color: var(--primary-color);
+                        font-size: 1.2em;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        color: var(--text-light);
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .imgs{
+        margin: 25px;
+        display: flex;
+        gap: 25px;
+        img{
+            width: 360px;
+            border-radius: 20px;
+        }
+    }
+    p{
+        margin: 25px;
+        color: var(--text-color);
+        line-height: 2;
+    }
+    button{
+        margin: 10px 25px 40px 25px;
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 1px solid var(--background-color-red);
+        border-radius: 30px;
+        padding: 15px;
+        font-size: .9em;
+        &:hover{
+            border: 1px solid var(--text-color);
+        }
+    }
+}
+.other-games{
+    background-color: var(--background-color-dark);
+    margin: 60px 0 0 0;
+    width: 1175px;
+    border-radius: 20px;
+    h1{
+        margin: 25px;
+        color: var(--primary-color);
+        font-size: 2.2em;
+        span{
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+    }
+    .games{
+        margin: 0 25px;
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+        .game{
+            display: flex;
+            align-items: center;
+            width: 550px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--text-color);
+            img{
+                flex: 1;
+                border-radius: 25px;
+                margin-right: 10px;
+            }
+            .info{
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                .name{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 5px;
+                    h4{
+                        color: var(--text-light);
+                    }
+                    .scor{
+                        display: flex;
+                        align-items: center;
+                        .icon{
+                            color: yellow;
+                            font-size: 1.2em;
+                        }
+                        p{
+                            color: var(--text-light);
+                        }
+                    }
+                }
+                .type{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h4{
+                        color: var(--text-color);
+                        font-weight: 400;
+                    }
+                    .down{
+                        display: flex;
+                        align-items: center;
+                        .icon{
+                            color: var(--primary-color);
+                            font-size: 1.4em;
+                        }
+                        p{
+                            color: var(--text-light);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
